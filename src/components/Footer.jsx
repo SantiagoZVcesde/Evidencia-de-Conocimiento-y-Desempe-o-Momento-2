@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer>
+    <footer className="main-footer">
       <p>&copy; 2026 Zenith Bonsai Studio.</p>
     </footer>
   );

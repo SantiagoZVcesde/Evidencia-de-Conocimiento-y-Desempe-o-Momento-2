@@ -2,13 +2,17 @@ import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
-    <main className="hero-section">
+    <main className="main-content hero-layout">
       <div className="hero-content">
-        <h1>El arte de la paciencia</h1>
-        <p>Descubre la serenidad a través del cuidado y diseño de árboles Bonsái. Un espacio para reconectar con la naturaleza.</p>
-        <Link className="btn" to="/booking">Reserva un taller</Link>
+        <h1 className="title-large">El arte de la <br /> paciencia</h1>
+        
+        <p className="subtitle-hero">
+          Descubre la serenidad a través del cuidado y diseño de árboles Bonsái. 
+          Un espacio para reconectar con la naturaleza.
+        </p>
+        <br></br>
+        <Link className="btn-main" to="/booking">Reserva un taller</Link>
       </div>
-      <div className="hero-image"></div>
     </main>
   );
 };

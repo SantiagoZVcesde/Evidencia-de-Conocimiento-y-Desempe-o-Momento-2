@@ -2,29 +2,19 @@ import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
   return (
-    <nav className="navbar">
-      <NavLink to="/" className="logo">Zenith Bonsai</NavLink>
-      <div className="nav-links">
-        <NavLink 
-          to="/philosophy" 
-          className={({ isActive }) => (isActive ? 'active' : '')}
-        >
-          Filosofía
-        </NavLink>
-        <NavLink 
-          to="/gallery" 
-          className={({ isActive }) => (isActive ? 'active' : '')}
-        >
-          Galería
-        </NavLink>
-        <NavLink 
-          to="/booking" 
-          className={({ isActive }) => (isActive ? 'active' : '')}
-        >
-          Reservas
-        </NavLink>
-      </div>
-    </nav>
+    // Mantenemos el header con su clase para el fondo blanco
+    <header className="navbar-container">
+      <nav className="navbar">
+        {/* Cambiamos 'a' por 'NavLink' y 'href' por 'to' */}
+        <NavLink to="/" className="logo">ZENITH BONSAI</NavLink>
+        
+        <div className="nav-links">
+          <NavLink to="/philosophy">Filosofía</NavLink>
+          <NavLink to="/gallery">Galería</NavLink>
+          <NavLink to="/booking">Reservas</NavLink>
+        </div>
+      </nav>
+    </header>
   );
 };
 

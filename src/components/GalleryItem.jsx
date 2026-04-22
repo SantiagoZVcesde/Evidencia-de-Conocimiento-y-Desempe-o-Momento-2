@@ -1,7 +1,7 @@
 const GalleryItem = ({ treeName }) => {
   return (
     <div className="gallery-item">
-      {treeName}
+      <span>{treeName}</span>
     </div>
   );
 };

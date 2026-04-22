@@ -11,18 +11,18 @@ const Gallery = () => {
   return (
     <>
       <Navbar />
-      <main className="content-section">
-        <div style={{ width: '100%' }}>
-          <h1 style={{ textAlign: 'center' }}>Nuestra Colección</h1>
-          <p style={{ textAlign: 'center', maxWidth: '600px', margin: '0 auto var(--spacing-lg)' }}>
-            Un vistazo a algunos de los ejemplares en los que hemos trabajado.
+      <main className="main-content">
+        <div className="section-header">
+          <h1 className="title-gallery">Nuestra Colección</h1>
+          <p className="subtitle-gallery">
+            Un vistazo a algunos de los ejemplares en los que hemos trabajado. Cada árbol cuenta una historia de tiempo y paciencia.
           </p>
-          
-          <div className="gallery-grid">
-            {misArboles.map((arbol, index) => (
-              <GalleryItem key={index} treeName={arbol} />
-            ))}
-          </div>
+        </div>
+        
+        <div className="gallery-grid">
+          {misArboles.map((arbol, index) => (
+            <GalleryItem key={index} treeName={arbol} />
+          ))}
         </div>
       </main>
       <Footer />
