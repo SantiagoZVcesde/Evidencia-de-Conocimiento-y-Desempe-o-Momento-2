@@ -5,7 +5,7 @@ const Philosophy = () => {
   return (
     <>
       <Navbar />
-      <main className="main-content philosophy-layout">
+      <main className="main-content philosophy-layout-Filosofia">
         <h1 className="title-large">Menos es más</h1>
         <div className="text-block">
           <p className="subtitle">Nuestra filosofía se centra en la observación y el respeto por los ritmos naturales. Creemos que cultivar un Bonsái no es solo jardinería, sino una meditación activa.</p>

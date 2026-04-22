@@ -66,6 +66,12 @@ body {
   flex-direction: column;
 }
 
+.philosophy-layout-Filosofia{
+  display: block !important;    /* Quitamos el Flexbox que los pone de lado */
+  text-align: left !important;  /* Todo al inicio */
+  max-width: 900px;             /* Para que no se estire al infinito */
+  margin: 0 auto;  
+}
 
 /* Ajuste específico para centrar Home y Filosofía */
 .philosophy-layout {
@@ -81,14 +87,18 @@ body {
 }
 
 .section-header {
-  text-align: center;
+  text-align: left;         /* Cambiado de center a left */
   margin-bottom: 4rem;
+  width: 100%;              /* Asegura que ocupe todo el ancho para alinear bien */
+  max-width: 900px;         /* Debe coincidir con el ancho de tu form-card o contenido */
+  margin-left: auto;        /* Estas dos líneas mantienen el bloque centrado */
+  margin-right: auto;       /* pero el texto adentro mirará a la izquierda */
 }
 
 .title-large {
   font-size: 52px; 
   font-weight: 400;
-  letter-spacing: -3px;
+  letter-spacing: 2px;
   line-height: 1.05;
   margin-bottom: 1.5rem;
   text-align: left;
@@ -97,16 +107,15 @@ body {
 .subtitle {
   font-size: 1.15rem;
   color: var(--texto-suave);
-  max-width: 600px;
+  max-width: 650px;
   margin: 0 auto;
   text-align: left;
-  color: black;
 }
 
 .subtitle-hero{
   font-size: 1.15rem;
   color: var(--texto-suave);
-  max-width: 600px;
+  max-width: 650px;
   justify-content: left;
   align-items: left;
   text-align: left;
@@ -123,7 +132,7 @@ body {
 .title-gallery{
     font-size: 52px; 
   font-weight: 400;
-  letter-spacing: -3px;
+  letter-spacing: 2px;
   line-height: 1.05;
   margin-bottom: 1.5rem;
   text-align: center;
@@ -132,7 +141,7 @@ body {
 .subtitle-gallery{
     font-size: 1.15rem;
   color: var(--texto-suave);
-  max-width: 600px;
+  max-width: 650px;
   margin: 0 auto;
   text-align: center;
   color: black;
@@ -152,46 +161,60 @@ body {
 }
 
 /* --- FORMULARIO DE RESERVAS (Caja Blanca) --- */
-.title-Booking{
+/* --- FORMULARIO DE RESERVAS (Caja Blanca Ajustada) --- */
+.title-Booking {
   font-size: 52px; 
   font-weight: 400;
-  letter-spacing: -3px;
+  letter-spacing: 2px;
   line-height: 1.05;
   margin-bottom: 1.5rem;
-  text-align: center;
+  text-align: left;
 }
 
 .form-card {
-  max-width: 800px;
+  width: 100%;             /* Asegura que use el ancho disponible */
+  max-width: 750px;        /* Aumentado de 800 a 900 para que sea más grande */
   margin: 0 auto;
   background: var(--blanco-puro);
-  padding: 3.5rem;
+  padding: 4.5rem;         /* Aumentado el aire interno para mayor elegancia */
   border: 1px solid var(--borde-sutil);
   border-radius: 4px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02); /* Sutil sombra para resaltar */
 }
 
 .form-group {
-  margin-bottom: 1.8rem;
-  text-align: left; /* Para que los labels no se centren */
+  margin-bottom: 2rem;     /* Un poco más de espacio entre grupos */
+  text-align: left;
 }
 
 .form-group label {
   display: block;
   font-size: 0.85rem;
   font-weight: 600;
-  margin-bottom: 0.7rem;
+  margin-bottom: 0.8rem;
+  color: var(--verde-oscuro);
+  text-transform: uppercase; /* Opcional: le da un toque más limpio */
+  letter-spacing: 0.5px;
 }
 
 .form-group input, 
 .form-group select, 
 .form-group textarea {
   width: 100%;
-  padding: 1rem;
+  padding: 1.2rem;         /* Inputs más altos y cómodos */
   border: 1px solid var(--borde-sutil);
-  background: transparent;
+  background: #fff;        /* Fondo blanco sólido */
   font-family: inherit;
   font-size: 1rem;
-  color: var(--texto-suave);
+  color: var(--verde-oscuro);
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus, 
+.form-group select:focus, 
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--verde-oscuro); /* Resalta al escribir */
 }
 
 /* --- BOTONES --- */
@@ -199,13 +222,14 @@ body {
   display: inline-block;
   background-color: var(--verde-oscuro);
   color: var(--blanco-puro);
-  padding: 1.1rem 2.5rem;
+  padding: 1.2rem 2.5rem;  /* Botón ligeramente más robusto */
   border-radius: 4px;
   text-decoration: none;
-  font-size: 0.95rem;
+  font-size: 1rem;
+  font-weight: 500;
   border: none;
   cursor: pointer;
-  transition: opacity 0.3s;
+  transition: all 0.3s ease;
   margin-top: 1rem;
 }
 
@@ -215,8 +239,8 @@ body {
 
 .btn:hover, .btn-main:hover, .btn-block:hover {
   opacity: 0.9;
+  transform: translateY(-1px); /* Efecto sutil de elevación */
 }
-
 /* --- FOOTER --- */
 .main-footer {
   text-align: center;
